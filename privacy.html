@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – Nutrition Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 60px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .last-updated {
+            font-size: 1rem;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 30px 30px 0 0;
+            padding: 60px 40px;
+            min-height: 100vh;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2d3748;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .subsection-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        .section-text {
+            color: #4a5568;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0 15px 20px;
+        }
+
+        .info-list li {
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            border-radius: 8px;
+            color: #4a5568;
+            font-size: 1.05rem;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .info-list li:before {
+            content: "•";
+            position: absolute;
+            left: 15px;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #f56565;
+            margin: 20px 0;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-top: 30px;
+        }
+
+        .contact-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .contact-box a {
+            color: white;
+            font-weight: 700;
+            text-decoration: underline;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-box a:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #4a5568;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .main-content {
+                padding: 40px 20px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .contact-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: [Insert Date]</p>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <section class="section">
+                <h2 class="section-title">1. Introduction</h2>
+                <p class="section-text">
+                    Nutrition Tracker ("the App", "we", "us") is committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your personal data.
+                </p>
+                <p class="section-text">
+                    By using Nutrition Tracker, you agree to the practices described in this policy.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">2. Information We Collect</h2>
+                
+                <h3 class="subsection-title">2.1 Account Information</h3>
+                <p class="section-text">
+                    When you sign in with Apple, Google, or email, we collect and store:
+                </p>
+                <ul class="info-list">
+                    <li>User ID</li>
+                    <li>Email address</li>
+                    <li>Display name</li>
+                </ul>
+                <p class="section-text">This is required for:</p>
+                <ul class="info-list">
+                    <li>Account creation</li>
+                    <li>Trial and subscription management</li>
+                    <li>Syncing your data across devices</li>
+                    <li>Future features such as inviting friends</li>
+                </ul>
+
+                <h3 class="subsection-title">2.2 App Usage Information</h3>
+                <p class="section-text">
+                    We collect the information you enter into the App, including:
+                </p>
+                <ul class="info-list">
+                    <li>Logged meals</li>
+                    <li>Water intake</li>
+                    <li>Medicine logs and reminders</li>
+                    <li>Diet preferences</li>
+                    <li>Reminder settings</li>
+                </ul>
+                <div class="highlight-box">
+                    <p class="section-text" style="margin: 0;">
+                        This information is used only to provide app features.
+                    </p>
+                </div>
+
+                <h3 class="subsection-title">2.3 Device Information</h3>
+                <p class="section-text">
+                    We may collect non-personal technical data such as:
+                </p>
+                <ul class="info-list">
+                    <li>Device type</li>
+                    <li>Operating system version</li>
+                    <li>App version</li>
+                    <li>Crash or performance data</li>
+                </ul>
+                <p class="section-text">This helps diagnose problems and improve the App.</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">3. How We Use Your Information</h2>
+                <p class="section-text">
+                    We use your data only for the following purposes:
+                </p>
+                <ul class="info-list">
+                    <li>Creating and managing your account</li>
+                    <li>Enabling subscription and trial functionality</li>
+                    <li>Syncing your nutrition, water, and medicine logs</li>
+                    <li>Sending optional reminders</li>
+                    <li>Supporting invite-friends and ranking features</li>
+                    <li>Improving app performance and reliability</li>
+                    <li>Providing customer support</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">4. What We Do Not Do</h2>
+                <div class="warning-box">
+                    <p class="section-text" style="font-weight: 600; color: #2d3748;">We do NOT:</p>
+                    <ul class="info-list">
+                        <li>Sell your personal data to third parties</li>
+                        <li>Share your information for advertising</li>
+                        <li>Track you across other apps or websites</li>
+                        <li>Use your data for purposes not described in this policy</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">5. Data Storage and Security</h2>
+                <p class="section-text">
+                    We use trusted third-party services such as Firebase Authentication and Firebase Firestore to securely store and process your data.
+                </p>
+                <p class="section-text">
+                    All data is transmitted using encrypted (HTTPS) channels.
+                </p>
+                <p class="section-text">
+                    Your data may be stored or processed on servers located in:
+                </p>
+                <ul class="info-list">
+                    <li>The United States</li>
+                    <li>The European Union</li>
+                    <li>Other regions where Firebase operates</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">6. International Data Transfers</h2>
+                
+                <h3 class="subsection-title">United States & Global Users</h3>
+                <p class="section-text">
+                    Your information may be processed in countries outside your home country.
+                </p>
+
+                <h3 class="subsection-title">Canadian Users (PIPEDA)</h3>
+                <p class="section-text">
+                    Your data may be transferred outside of Canada for processing. By using the App, you consent to this transfer.
+                </p>
+
+                <h3 class="subsection-title">EU Users (GDPR)</h3>
+                <p class="section-text">
+                    Data may be transferred outside the EU; we rely on secure providers with appropriate safeguards such as Standard Contractual Clauses.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">7. Legal Basis for Processing (GDPR)</h2>
+                <p class="section-text">
+                    For users in the European Union, the legal bases for processing your data include:
+                </p>
+                <ul class="info-list">
+                    <li>Contractual necessity (providing app features)</li>
+                    <li>User consent (sign-in and optional reminders)</li>
+                    <li>Legitimate interest (ensuring security and performance)</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">8. Your Rights</h2>
+                
+                <h3 class="subsection-title">Under GDPR (EU):</h3>
+                <p class="section-text">You have the right to:</p>
+                <ul class="info-list">
+                    <li>Access your personal data</li>
+                    <li>Correct inaccurate data</li>
+                    <li>Request deletion of your data</li>
+                    <li>Withdraw consent for processing</li>
+                    <li>Export your data (data portability)</li>
+                </ul>
+
+                <h3 class="subsection-title">Under PIPEDA (Canada) and CCPA/CPRA (USA):</h3>
+                <p class="section-text">You may request:</p>
+                <ul class="info-list">
+                    <li>Access to your data</li>
+                    <li>Correction</li>
+                    <li>Deletion</li>
+                    <li>Disclosure of how your data is used</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p class="section-text" style="margin: 0;">
+                        To make a request, email us at: <strong>[your support email]</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">9. Data Retention</h2>
+                <p class="section-text">
+                    We retain your data for as long as your account is active. If you request deletion, all associated data will be permanently removed.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">10. Children's Privacy</h2>
+                <p class="section-text">
+                    Nutrition Tracker is not intended for children under 13. We do not knowingly collect personal information from children under 13.
+                </p>
+                <p class="section-text">
+                    If we discover that we have collected data from a child under 13, we will delete it promptly.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">11. Changes to This Privacy Policy</h2>
+                <p class="section-text">
+                    We may update this policy as the App evolves. Updates will be posted with a revised "Last Updated" date.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">12. Contact Us</h2>
+                <p class="section-text">
+                    If you have questions or privacy requests, contact us:
+                </p>
+                <div class="contact-box">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Email:</strong> <a href="mailto:voiceapplication2025@gmail.com">your-email@example.com</a></p>
+                    <p><strong>Support Page:</strong> <a href="https://vapp2025.github.io/nutrition-tracker-app-support/support">Visit our Support Page</a></p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nutrition Tracker. Your privacy is our priority.</p>
+        </div>
+    </footer>
+</body>
+</html>
