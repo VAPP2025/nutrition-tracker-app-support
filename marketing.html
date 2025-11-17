@@ -1,78 +1,318 @@
-<!-- File: marketing.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nutrition Tracker — Eat Better. Live Better.</title>
-<style>
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:linear-gradient(180deg,#f8fbff,#ffffff);color:#06202b}
-.hero{padding:48px 20px;text-align:center}
-.card{max-width:920px;margin:0 auto;background:#fff;padding:28px;border-radius:12px;box-shadow:0 8px 28px rgba(4,18,34,0.06)}
-h1{margin:0 0 8px;font-size:28px}
-p.lead{margin:0 0 18px;color:#304455;font-size:16px}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
-.feature{padding:14px;border-radius:8px;border:1px solid #eef4fb;background:#fbfdff}
-.feature h3{margin:0 0 6px;font-size:16px}
-.cta{margin-top:20px}
-.btn{display:inline-block;padding:10px 16px;border-radius:8px;background:#0b76ff;color:#fff;text-decoration:none;font-weight:600}
-footer{margin-top:22px;text-align:center;color:#5b6f7f;font-size:13px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Tracker – Eat Better. Live Better.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 60px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 30px 30px 0 0;
+            padding: 60px 20px;
+            min-height: 100vh;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #2d3748;
+        }
+
+        .section-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #4a5568;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .feature-description {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .benefits-section {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .benefits-list li {
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            font-size: 1.1rem;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #4a5568;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="hero">
-<div class="card">
-<h1>Nutrition Tracker</h1>
-<p class="lead">Eat better. Live better. Track meals, water, and medicine with ease—set reminders and choose the diet that fits you.</p>
+    <header>
+        <div class="container">
+            <h1>Nutrition Tracker</h1>
+            <p class="tagline">Eat Better. Live Better.</p>
+            <p class="subtitle">Track your meals, water, and medicine—all in one clean, intuitive place.<br>
+            Start improving your nutrition today, one small step at a time.</p>
+            <a href="#" class="cta-button">Get Started Free</a>
+        </div>
+    </header>
 
+    <div class="main-content">
+        <div class="container">
+            <section class="section">
+                <h2 class="section-title">🌟 Why Nutrition Tracker?</h2>
+                <p class="section-intro">
+                    Healthy living doesn't have to be complicated. Nutrition Tracker helps you stay consistent by making daily logging fast, simple, and motivating. Whether you're trying to eat healthier, drink more water, stay on schedule with medicine, or follow a specific diet, Nutrition Tracker helps you stay on track effortlessly.
+                </p>
+            </section>
 
-<div class="features">
-<div class="feature">
-<h3>Log Meals</h3>
-<p>Quickly record breakfast, lunch, dinner, and snacks to stay aware of your nutrition.</p>
-</div>
+            <section class="section">
+                <h2 class="section-title">✨ What You Can Do</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">🍽</span>
+                        <h3 class="feature-title">Log Your Meals</h3>
+                        <p class="feature-description">Record breakfast, lunch, dinner, and snacks in seconds to stay aware of your daily nutrition.</p>
+                    </div>
 
+                    <div class="feature-card">
+                        <span class="feature-icon">💧</span>
+                        <h3 class="feature-title">Track Water Intake</h3>
+                        <p class="feature-description">Stay hydrated with quick water logging and daily totals.</p>
+                    </div>
 
-<div class="feature">
-<h3>Track Water</h3>
-<p>Simple water logging keeps your hydration on target every day.</p>
-</div>
+                    <div class="feature-card">
+                        <span class="feature-icon">💊</span>
+                        <h3 class="feature-title">Log Medicine</h3>
+                        <p class="feature-description">Keep a clear record of your medicine schedule and never lose track.</p>
+                    </div>
 
+                    <div class="feature-card">
+                        <span class="feature-icon">🥗</span>
+                        <h3 class="feature-title">Choose Your Diet Style</h3>
+                        <p class="feature-description">Select your preferred diet type—balanced, low-carb, high-protein, vegetarian, and more—to personalize your experience.</p>
+                    </div>
 
-<div class="feature">
-<h3>Log Medicine</h3>
-<p>Keep a clear record of doses taken to support your wellness routine.</p>
-</div>
+                    <div class="feature-card">
+                        <span class="feature-icon">⏰</span>
+                        <h3 class="feature-title">Set Smart Reminders</h3>
+                        <p class="feature-description">Meal times, water intake, medicine—Nutrition Tracker can remind you, only if you choose to enable notifications.</p>
+                    </div>
 
+                    <div class="feature-card">
+                        <span class="feature-icon">📊</span>
+                        <h3 class="feature-title">View Your Day at a Glance</h3>
+                        <p class="feature-description">A simple dashboard shows everything you logged throughout the day for a clear overview.</p>
+                    </div>
+                </div>
+            </section>
 
-<div class="feature">
-<h3>Choose a Diet</h3>
-<p>Personalize your experience with diet styles like balanced, low-carb, high-protein, vegetarian, and more.</p>
-</div>
+            <section class="section">
+                <h2 class="section-title">🌱 Build Healthier Habits</h2>
+                <div class="benefits-section">
+                    <p class="section-intro">Small daily actions create long-term results. Nutrition Tracker helps you stay consistent with:</p>
+                    <ul class="benefits-list">
+                        <li>Optional reminders</li>
+                        <li>Personalized diet settings</li>
+                        <li>Simple tracking</li>
+                        <li>Visual daily progress</li>
+                    </ul>
+                </div>
+                <p class="section-intro" style="margin-top: 40px;">Perfect for anyone wanting to take control of their nutrition and wellness.</p>
+            </section>
 
+            <section class="section">
+                <h2 class="section-title">📲 Get Started</h2>
+                <p class="section-intro">
+                    Nutrition Tracker is easy to use from day one—no complicated setup required. Simply download, log your first meal, and begin building better daily habits.
+                </p>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#" class="cta-button">Download Now</a>
+                </div>
+            </section>
 
-<div class="feature">
-<h3>Set Reminders</h3>
-<p>Enable optional notifications for meals, water, and medicine so you never miss an important time.</p>
-</div>
+            <section class="section">
+                <h2 class="section-title">📬 Support & Contact</h2>
+                <p class="section-intro">
+                    Have questions? Need help? Visit our <a href="#" style="color: #667eea; font-weight: 600; text-decoration: none;">Support Page</a> or email us at: 
+                    <a href="mailto:voiceapplication2025@gmail.com" style="color: #667eea; font-weight: 600; text-decoration: none;">NutritionTracherSupport</a>
+                </p>
+            </section>
+        </div>
+    </div>
 
-
-<div class="feature">
-<h3>Daily Overview</h3>
-<p>See everything you logged in a clean dashboard to track progress at a glance.</p>
-</div>
-</div>
-
-
-<div class="cta">
-<a class="btn" href="#">Download on the App Store</a>
-</div>
-
-
-<footer>
-<p>Questions? Visit our <a href="support.html">Support Page</a> or email <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-</footer>
-</div>
-</div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nutrition Tracker. Start your wellness journey today.</p>
+        </div>
+    </footer>
 </body>
 </html>
